@@ -33,7 +33,6 @@ export default {
     external(),
     resolve(),
     typescript({
-      rollupCommonJSResolveHack: true,
       exclude: [
         '**/__tests__/**',
         '**/*.stories.tsx'
@@ -51,9 +50,6 @@ export default {
         ],
         'node_modules/react-dom/index.js': ['render']
       }
-    }),
-    terser({
-      include: [/^.+\.min\.js$/, '*esm*']
     })
   ]
 }
